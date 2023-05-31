@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
 	margin: 0;
 	background-color: #252525;
 }
@@ -11,21 +12,55 @@ html, body {
 .ground {
 	display: flex;
 	background-color: #a55d2a;
-	width: 100vw;
 	border-top: 2px solid green;
 }
 
 /* Use id selector since I want this element to have an id */
 #cistern {
 	display: flex;
-	background-color: #484848;
+	background: linear-gradient(90deg, white 5%, grey 80%);
 	border: 4px solid #2d2d2d;
 	margin-left: 1rem;
+}
+
+#pumps {
+	display: flex;
+	justify-content: flex-end;
+	margin-left: 16px;
+}
+
+.pump-container {
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+}
+
+.pipe-horizontal {
+	width: 176px;
+	background-color: #393939;
+	height: 16px;
+	background: linear-gradient(#393939 5%, rgb(96, 96, 96) 80%);
+}
+
+.pump-pipe {
+	background-color: #393939;
+	height: 256px;
+	width: 16px;
+	background: linear-gradient(90deg, #393939 5%, rgb(96, 96, 96) 80%);
+}
+
+.pump {
+	width: 128px;
+	height: 160px;
+	background-color: #393939;
+	border: 4px solid;
 }
 
 #water {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	transition: top 0.1s ease;
+	right: 0;
+	transition: top 0.5s ease;
+	background-color: rgba(0, 0, 255, 0.7);
 }

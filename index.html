@@ -1,19 +1,30 @@
 <html>
 	<head>
 		<title>Pump Display MVP</title>
-		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="index.css" />
 		<script src="index.js" defer></script>
 	</head>
 	<body>
 		<div class="ground">
 			<div id="cistern">
-				<div style="display:flex;flex-direction:column;">
-					<div style="display:flex;justify-content:flex-end;">
+				<div style="display: flex; flex-direction: column">
+					<div style="display: flex; justify-content: center; gap: 0.5rem; margin: 0.25rem">
 						<h1 id="height" class="label">0.0ft</h1>
+						<h1 id="flow" class="label">0.0gpm</h1>
+					</div>
+					<div style="position: relative; flex-grow: 1; height: 100%">
+						<div id="water"></div>
+						<div id="pumps"></div>
 					</div>
 				</div>
 			</div>
-			<div></div>
+			<div>
+				<textarea id="json" style="min-width:350px"></textarea>
+				<h2 id="error" style="background:red;color:black;"></h2>
+				<button onclick="addPump()">Add Pump</button>
+				<button onclick="removePump()">Remove Pump</button>
+				<button onclick="updateJson()">Update</button>
+			</div>
 		</div>
 	</body>
 </html>
